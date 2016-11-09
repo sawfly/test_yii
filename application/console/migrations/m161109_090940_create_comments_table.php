@@ -36,12 +36,12 @@ class m161109_090940_create_comments_table extends Migration
         $this->createIndex(
             'idx-comments-post_id',
             'comments',
-            'user_id'
+            'post_id'
         );
         $this->addForeignKey(
             'fk-comments-post_id',
             'comments',
-            'user_id',
+            'post_id',
             'posts',
             'id',
             'CASCADE'
