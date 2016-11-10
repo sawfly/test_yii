@@ -16,6 +16,7 @@ class m161109_081342_create_users_table extends Migration
             'id' => $this->primaryKey(),
             'name' => $this->string(50),
             'password' => $this->string(),
+            'auth_key' => $this->string(),
             'email' => $this->string(),
             'status_id' => $this->smallInteger()->unsigned()->defaultValue(0),
             'permission_id' => $this->smallInteger()->unsigned()->defaultValue(0)

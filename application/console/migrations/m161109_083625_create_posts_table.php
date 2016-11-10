@@ -15,6 +15,7 @@ class m161109_083625_create_posts_table extends Migration
         $this->createTable('posts', [
             'id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull(),
+            'title' => $this->string(),
             'post' => $this->text(),
             'created_at' => $this->timestamp()->defaultExpression('NOW()'),
         ]);
